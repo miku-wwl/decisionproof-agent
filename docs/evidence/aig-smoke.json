@@ -1,0 +1,74 @@
+{
+  "kind": "synthetic dependency smoke; scripted example consent",
+  "checks": {
+    "installed_identity": {
+      "status": "PASS",
+      "version": "0.2.0",
+      "source": {
+        "url": "https://github.com/miku-wwl/agentic-intent-gate",
+        "vcs_info": {
+          "vcs": "git",
+          "commit_id": "7261fdd2f47d2b15fabe8faac527eeee37338eb1",
+          "requested_revision": "7261fdd2f47d2b15fabe8faac527eeee37338eb1"
+        }
+      },
+      "module_relative_to_venv": "Lib\\site-packages\\agentic_intent_gate\\runtime.py",
+      "signatures": {
+        "ToolBinding": "(tool_name: str, tool_version: str, adapter_id: str, binding_revision: str, target: str, execution_scope: str) -> None",
+        "ToolCapability": "(binding: agentic_intent_gate.application.action_compiler.ToolBinding, description: str, input_schema: collections.abc.Mapping, target_argument: str | None = None, semantic_rule: collections.abc.Callable | None = None) -> None",
+        "ExecutableRegistry": "(executor=None, *, binding=None)",
+        "CapabilityVerifier": "(token=None, *, subject_id=None, binding=None, operations=())",
+        "BoundCapabilityAuthorization": "(verifier: agentic_intent_gate.infrastructure.security.local_capability.CapabilityVerifier, *, policy_revision: str)",
+        "execution_budget_binding": "(binding, execution_timeout_seconds)",
+        "open_runtime": "(*, gate_path, provider, capability, registry, verifier, policy, predecessor_stopped=False, execution_timeout_seconds=5)",
+        "Intent": "(text: 'str') -> None",
+        "ModelProvider": "(*args, **kwargs)",
+        "ToolExecutor": "(*args, **kwargs)",
+        "ApprovalDecisionRequest": "(decision: 'ApprovalChoice', expected_version: 'int', reason: 'str | None' = None) -> None",
+        "AdmissionCommand": "(run_id: str, expected_run_version: int, subject_id: str, idempotency_key: str) -> None",
+        "ActionCommand": "(action_id: str, expected_action_version: int, idempotency_key: str) -> None",
+        "ToolOutcome": "(category: agentic_intent_gate.ports.tool_executor.Outcome, effect_key: str | None = None, execution_scope: str | None = None, target: str | None = None, payload_digest: str | None = None, receipt_reference: str | None = None, no_effect_reason: str | None = None) -> None",
+        "ModelProvider.generate_plan": "(self, intent: agentic_intent_gate.domain.contracts.Intent, *, tools: collections.abc.Sequence[agentic_intent_gate.domain.contracts.Tool], plan_schema: collections.abc.Mapping[str, object], timeout_seconds: float) -> str",
+        "ToolExecutor.execute": "(self, spec: agentic_intent_gate.ports.tool_executor.ExecutionSpec, effect_key: str, context: agentic_intent_gate.ports.tool_executor.AttemptContext) -> agentic_intent_gate.ports.tool_executor.ToolOutcome"
+      },
+      "record_hashes_verified": 57
+    },
+    "success": {
+      "status": "PASS",
+      "state": "Succeeded",
+      "effects": 1,
+      "exact_command_replay": true,
+      "new_process_read": "Succeeded",
+      "receipt_correlated": true,
+      "action_attempts": 1,
+      "action_events": 4
+    },
+    "missing_authorization": {
+      "status": "PASS",
+      "error_code": "ACTION_NOT_EXECUTABLE",
+      "effects": 0
+    },
+    "lost_ack": {
+      "status": "PASS",
+      "state": "Unknown",
+      "effects": 1,
+      "exact_command_replay": true,
+      "new_process_read": "Unknown",
+      "attempts": 1
+    },
+    "unknown_tool": {
+      "status": "PASS",
+      "run_state": "PlanRejected",
+      "effects": 0
+    }
+  },
+  "example_sha256": "98e6fc2812fc009d34c5abf3249bf31e791752d572c4910388132b8d7060df88",
+  "public_methods": {
+    "run_service.create": "(intent: agentic_intent_gate.domain.contracts.Intent, *, deadline: float | None = None) -> agentic_intent_gate.domain.run.Run",
+    "run_service.decide": "(run_id: str, request: agentic_intent_gate.domain.approval.ApprovalDecisionRequest) -> agentic_intent_gate.domain.run.Run",
+    "actions.get": "(action_id)",
+    "gateway.admit": "(command, principal)",
+    "gateway.authorize": "(command, principal)",
+    "gateway.execute": "(command, principal, *, deadline=None)"
+  }
+}

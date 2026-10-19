@@ -1,0 +1,55 @@
+{
+  "observed_utc": "2026-10-19T11:28:03.3317514+00:00",
+  "client_date": "2026-10-20",
+  "timezone": "Pacific/Auckland",
+  "os": "Microsoft Windows 11 家庭版 中文版",
+  "os_version": "10.0.26200",
+  "architecture": "64 位",
+  "powershell": "7.6.7",
+  "tools": {
+    "git": {
+      "found": true,
+      "path": "d:\\Git\\cmd\\git.exe"
+    },
+    "uv": {
+      "found": true,
+      "path": "C:\\Users\\weila\\.local\\bin\\uv.exe"
+    },
+    "python": {
+      "found": true,
+      "path": "D:\\anaconda3\\python.exe"
+    },
+    "node": {
+      "found": true,
+      "path": "D:\\node\\node.exe"
+    },
+    "npm": {
+      "found": true,
+      "path": "D:\\node\\npm.ps1"
+    },
+    "docker": {
+      "found": true,
+      "path": "D:\\DockerDesktop\\resources\\bin\\docker.exe"
+    },
+    "cursor": {
+      "found": false,
+      "path": null
+    }
+  },
+  "versions": {
+    "git": "git version 2.49.0.windows.1",
+    "uv": "uv 0.11.16 (135a36367 2026-05-21 x86_64-pc-windows-msvc)",
+    "python": "Python 3.13.9",
+    "node": "v26.5.0",
+    "npm": "12.0.1"
+  },
+  "docker_client": "29.8.0",
+  "docker_engine": "29.8.0",
+  "docker_context": "desktop-linux",
+  "sponsor_environment_names_only": [],
+  "limits": [
+    "No private credential files or browser cookies searched",
+    "Cursor command absent is not proof of no installation",
+    "Docker workload and browser UI not tested"
+  ]
+}

@@ -1,0 +1,199 @@
+[
+  {
+    "id": "event",
+    "url": "https://hackathon.genai.works/event/open-agent-hackathon-2026",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.602462+00:00",
+    "http_status": 200,
+    "bytes_read": 168229,
+    "sha256": "b03f3024e503b2c991540a698830548b5f853af3c272367fffc316e853c00275",
+    "content_type": "text/html; charset=utf-8",
+    "status": "PASS",
+    "rules_sections": [
+      {
+        "number": 1,
+        "title": "Eligibility",
+        "sha256": "76dfe102623275156aa53af8da06c798fdadc7a3ff735b4b2e792684943a2f8f"
+      },
+      {
+        "number": 2,
+        "title": "Teams",
+        "sha256": "af7f90cbf1907d742b0b13cd16a0112bdb141d29925b2fa7ace57c2b4aee810d"
+      },
+      {
+        "number": 3,
+        "title": "Tracks",
+        "sha256": "f2cef412fa2fc5652d0d0dbc2f81edc6790e6139daff29362e4cb967819a7a42"
+      },
+      {
+        "number": 4,
+        "title": "Build window",
+        "sha256": "207d081316f554dbbf194533b18fc0c059dac0eebfba284fc3eb627b34c4993a"
+      },
+      {
+        "number": 5,
+        "title": "What you can use",
+        "sha256": "34e53c9fcd19254fd1ac2832e259fbb2dea6222187f0fef475a612f3995c632c"
+      },
+      {
+        "number": 6,
+        "title": "Submission requirements",
+        "sha256": "8aca0580509046e65b0aad27bd63dcddf1636a13d205d42242885759bc30453f"
+      },
+      {
+        "number": 7,
+        "title": "Judging",
+        "sha256": "f0e38a21e1e58b591e1c16a6bf6c8059e7f63746a0fe63370971ea3d996b2ecd"
+      },
+      {
+        "number": 8,
+        "title": "Prizes",
+        "sha256": "d35a2600df790abd532334f2cf8a4745043e1c01f3b6f75a22cd7dae75998253"
+      },
+      {
+        "number": 9,
+        "title": "Intellectual property",
+        "sha256": "47dd08f062cb750dfbe4aa71007f583608f3dcfc68d69ad62138b6b803bda56b"
+      },
+      {
+        "number": 10,
+        "title": "Schedule & changes",
+        "sha256": "dc8f52256fa724159340c5e72251624d222f648c8bdb594a18e36eb1f9d7a2cc"
+      }
+    ],
+    "rules_section_count": 10,
+    "required_stack_clause_found": true,
+    "open_source_permission_found": true
+  },
+  {
+    "id": "academy",
+    "url": "https://academy.genai.works/courses/open-agent-hackathon-2026/details",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.603367+00:00",
+    "http_status": 200,
+    "bytes_read": 92999,
+    "sha256": "7431fb199f6bf74872c874baf84a412529a530018563c8487ee27f5365142ac7",
+    "content_type": "text/html; charset=utf-8",
+    "status": "PASS",
+    "direct_nemotron_or_meterless_clause_found": true
+  },
+  {
+    "id": "zetaris_rest",
+    "url": "https://kbase.zetaris.com/knowledge/rest-api",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.604130+00:00",
+    "http_status": 200,
+    "bytes_read": 158234,
+    "sha256": "21cbb46447ca630824854b20c164e02eefe194f2a0b4e304639657bc26b92106",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "PASS"
+  },
+  {
+    "id": "zetaris_docker",
+    "url": "https://kbase.zetaris.com/knowledge/docker-installation-on-docker-desktop",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.604984+00:00",
+    "http_status": 200,
+    "bytes_read": 160361,
+    "sha256": "22e533bcbedc9a53ac552626167ea000ef25469ba987037405732413cd3c371d",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "PASS"
+  },
+  {
+    "id": "meterless_contract",
+    "url": "https://raw.githubusercontent.com/Meterless/Meterless/main/docs/agent-ready/add-meterless-provider.md",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.605714+00:00",
+    "http_status": 200,
+    "bytes_read": 3241,
+    "sha256": "e2d77d8ff6bac07cf4c47043e30c3f7dde17ceccd1725f9a8643d5a9846b8f96",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "PASS"
+  },
+  {
+    "id": "nvidia_catalog",
+    "url": "https://integrate.api.nvidia.com/v1/models",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:03.606500+00:00",
+    "http_status": 200,
+    "bytes_read": 7751,
+    "sha256": "2da68136cacea2610cf95ac3e0df76a361764febef9edb23011ef3bd676a483c",
+    "content_type": "application/json",
+    "status": "PASS",
+    "nemotron_model_ids": [
+      "nvidia/llama-3.1-nemotron-51b-instruct",
+      "nvidia/llama-3.1-nemotron-70b-instruct",
+      "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "nvidia/nemotron-3-embed-1b",
+      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "nvidia/nemotron-3-super-120b-a12b",
+      "nvidia/nemotron-3-ultra-550b-a55b",
+      "nvidia/nemotron-3.5-content-safety",
+      "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "nvidia/nemotron-4-340b-instruct",
+      "nvidia/nemotron-4-340b-reward",
+      "nvidia/nemotron-nano-3-30b-a3b",
+      "nvidia/nemotron-parse",
+      "nvidia/nemotron-parse-2.0"
+    ],
+    "limitation": "catalog metadata only; no authenticated inference or free allowance verified"
+  },
+  {
+    "id": "nvidia_inference_docs",
+    "url": "https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-nano-30b-a3b-infer",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:04.193391+00:00",
+    "status": "BLOCKED",
+    "http_status": 403,
+    "reason": "HTTP access denied or unavailable"
+  },
+  {
+    "id": "cisa_kev",
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:04.213770+00:00",
+    "http_status": 200,
+    "bytes_read": 1792713,
+    "sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+    "content_type": "application/json",
+    "status": "PASS",
+    "catalog_version": "2026.10.16",
+    "catalog_date": "2026-10-16T17:15:48.8752Z",
+    "record_count": 1748,
+    "required_fields_valid": true
+  },
+  {
+    "id": "mpi_recalls",
+    "url": "https://www.mpi.govt.nz/food-safety-home/food-recalls-and-complaints/recalled-food-products",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:04.275752+00:00",
+    "http_status": 200,
+    "bytes_read": 946,
+    "sha256": "f8bc0ab479de31062b41b7a4ff623ab6aaa396c26a3165ad0f6c0d199835dde3",
+    "content_type": "text/html",
+    "status": "BLOCKED",
+    "reason": "HTTP response is an access-challenge page, not source data"
+  },
+  {
+    "id": "meterless_local_catalog",
+    "url": "http://127.0.0.1:8088/v1/models",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:04.345083+00:00",
+    "status": "BLOCKED",
+    "error_type": "URLError"
+  },
+  {
+    "id": "aig_main_handoff",
+    "url": "https://raw.githubusercontent.com/miku-wwl/agentic-intent-gate/main/docs/V0.2.0-CONSUMER-HANDOFF.md",
+    "method": "unauthenticated GET; TLS verification enabled for HTTPS",
+    "observed_utc": "2026-10-19T11:28:04.424408+00:00",
+    "http_status": 200,
+    "bytes_read": 11431,
+    "sha256": "311302a2eaee38af1ac092b3db161bfdbc901331a04917b5ab686b9b6468c4f0",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "PASS"
+  }
+]
