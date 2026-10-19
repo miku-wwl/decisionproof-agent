@@ -1,14 +1,25 @@
 [project]
 name = "decisionproof-agent"
 version = "0.0.0"
-description = "P0 environment preparation only; competition application not implemented"
+description = "Offline evidence-to-action Patch Review consumer of pinned AIG v0.2.0"
 requires-python = ">=3.13,<3.14"
 dependencies = [
   "agentic-intent-gate @ git+https://github.com/miku-wwl/agentic-intent-gate.git@7261fdd2f47d2b15fabe8faac527eeee37338eb1",
+  "fastapi==0.147.0",
+  "httpx==0.28.1",
+  "pydantic==2.14.1",
+  "uvicorn==0.54.0",
 ]
 
 [dependency-groups]
-dev = ["pytest>=8,<10"]
+dev = [
+    "playwright==1.64.0",
+    "pytest>=8,<10",
+]
 
 [tool.uv]
 package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

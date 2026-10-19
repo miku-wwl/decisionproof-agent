@@ -1,0 +1,2615 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T20:42:42.162137+00:00",
+  "kind": "offline synthetic deterministic evaluation; automated consent, not owner human approval",
+  "specification_sha256": "5cb1bf8edc80542e5400348ae6e5a0cb8ebf5d8b4dd91cf7762fead462946119",
+  "summaries": {
+    "A_severity_only": {
+      "scenarios": 16,
+      "selection_correct": 7,
+      "appropriate_abstention": 8,
+      "citation_validity": 1.0,
+      "unsupported_fact_rate": 0.0,
+      "revision_correct": 10,
+      "revision_cases": 13,
+      "retrieval_rounds": 0,
+      "task_integrity_passed": 16,
+      "median_elapsed_ms": 520.771,
+      "scripted_review_commands": 25
+    },
+    "B_full_no_followup": {
+      "scenarios": 16,
+      "selection_correct": 10,
+      "appropriate_abstention": 10,
+      "citation_validity": 1.0,
+      "unsupported_fact_rate": 0.0,
+      "revision_correct": 10,
+      "revision_cases": 13,
+      "retrieval_rounds": 0,
+      "task_integrity_passed": 16,
+      "median_elapsed_ms": 542.497,
+      "scripted_review_commands": 35
+    },
+    "C_bounded_followup": {
+      "scenarios": 16,
+      "selection_correct": 16,
+      "appropriate_abstention": 16,
+      "citation_validity": 1.0,
+      "unsupported_fact_rate": 0.0,
+      "revision_correct": 12,
+      "revision_cases": 13,
+      "retrieval_rounds": 11,
+      "task_integrity_passed": 16,
+      "median_elapsed_ms": 1175.271,
+      "scripted_review_commands": 65
+    }
+  },
+  "results": [
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s01",
+      "category": "clear",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "65cb8058-48bf-4f34-9e98-731a812ba215",
+        "current_decision_id": "65cb8058-48bf-4f34-9e98-731a812ba215",
+        "previous_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "current_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1181.216,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s02",
+      "category": "misleading severity",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": false,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "277dd7c4-4249-4c9a-8f02-a84fb91dc9e7",
+        "current_decision_id": "277dd7c4-4249-4c9a-8f02-a84fb91dc9e7",
+        "previous_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "current_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 981.373,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s03",
+      "category": "irrelevant product",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "032f0a3b-411a-4596-a05a-69701da35614",
+        "current_decision_id": "032f0a3b-411a-4596-a05a-69701da35614",
+        "previous_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "current_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [],
+        "current_ranking": [],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 468.194,
+      "citation_count": 0,
+      "valid_citations": 0,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s04",
+      "category": "missing version",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "ed56ff7e-0019-489f-b720-f7c4db81fde0",
+        "current_decision_id": "ed56ff7e-0019-489f-b720-f7c4db81fde0",
+        "previous_evidence_digest": "d960596fd28d8cd131a76294c30dc4ad63fe84e7d8779bc9257886a74ab1903a",
+        "current_evidence_digest": "d960596fd28d8cd131a76294c30dc4ad63fe84e7d8779bc9257886a74ab1903a",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing version"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 485.568,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s05",
+      "category": "conflict",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "b2205d72-c8d1-402f-9ab7-ca26be186375",
+        "current_decision_id": "b2205d72-c8d1-402f-9ab7-ca26be186375",
+        "previous_evidence_digest": "d18d307efc3184f00442f1f1ccd190a42f1e55640e9fbcb77077f0d21cfb6a99",
+        "current_evidence_digest": "d18d307efc3184f00442f1f1ccd190a42f1e55640e9fbcb77077f0d21cfb6a99",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: conflict exposed"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 485.267,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 17,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s06",
+      "category": "stale inventory",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "3c75fa29-ac5e-454e-95a2-ece8eb635bfd",
+        "current_decision_id": "3c75fa29-ac5e-454e-95a2-ece8eb635bfd",
+        "previous_evidence_digest": "e7074aea4c44ff2234c1660c9e28f3ac4b9551d089f1933b923082f1980aa35c",
+        "current_evidence_digest": "e7074aea4c44ff2234c1660c9e28f3ac4b9551d089f1933b923082f1980aa35c",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: stale product",
+          "A: stale version",
+          "A: stale exposed",
+          "A: stale criticality"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 490.753,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s07",
+      "category": "changed criticality",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "31ed959c-4d77-4ddb-9775-175d14f2a913",
+        "current_decision_id": "31ed959c-4d77-4ddb-9775-175d14f2a913",
+        "previous_evidence_digest": "49856c5dcffe6450139a209273a0a053cee12af45e4d7f0ae106d2e8c3d8e3c7",
+        "current_evidence_digest": "49856c5dcffe6450139a209273a0a053cee12af45e4d7f0ae106d2e8c3d8e3c7",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance",
+          "B: missing criticality"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 516.921,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 14,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s08",
+      "category": "missing policy",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "cc2535f2-c95e-4865-b62b-e8a8319fb024",
+        "current_decision_id": "cc2535f2-c95e-4865-b62b-e8a8319fb024",
+        "previous_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "current_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 523.51,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s09",
+      "category": "decision revision",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "d740b748-727f-42e5-a803-8f4270409178",
+        "current_decision_id": "d740b748-727f-42e5-a803-8f4270409178",
+        "previous_evidence_digest": "506c987e180c0e1408332e4afa6e14c7e170b4026ad54c69e957aabe25f913f4",
+        "current_evidence_digest": "506c987e180c0e1408332e4afa6e14c7e170b4026ad54c69e957aabe25f913f4",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "B: missing exposed"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 518.032,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 15,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s10",
+      "category": "no reversal",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "ce643b45-d08f-4423-a17e-59d6935ad9fc",
+        "current_decision_id": "ce643b45-d08f-4423-a17e-59d6935ad9fc",
+        "previous_evidence_digest": "a651b56eb64fe12fe560ea7f0ec53e1d432efeda2711e3b87b34c0bbd3bc6d50",
+        "current_evidence_digest": "a651b56eb64fe12fe560ea7f0ec53e1d432efeda2711e3b87b34c0bbd3bc6d50",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 551.195,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 15,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s11",
+      "category": "necessary abstention",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "937fa218-2d1e-4212-aa98-e2f9ae67bac0",
+        "current_decision_id": "937fa218-2d1e-4212-aa98-e2f9ae67bac0",
+        "previous_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "current_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [],
+        "current_ranking": [],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 515.419,
+      "citation_count": 0,
+      "valid_citations": 0,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s12",
+      "category": "authorization denied",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "deny"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "3dbc9031-70ef-4cf9-b970-80fb1668b7fa",
+        "current_decision_id": "3dbc9031-70ef-4cf9-b970-80fb1668b7fa",
+        "previous_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "current_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Denied",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 922.921,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s13",
+      "category": "ambiguous effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "unknown"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "7004dfa2-588c-4f55-9a21-250b7c4a5936",
+        "current_decision_id": "7004dfa2-588c-4f55-9a21-250b7c4a5936",
+        "previous_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "current_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Unknown",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1178.124,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s14",
+      "category": "failed effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "fail"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "4cbaa5d0-edd1-47d9-bede-ebad85ec2076",
+        "current_decision_id": "4cbaa5d0-edd1-47d9-bede-ebad85ec2076",
+        "previous_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "current_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Failed",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1237.614,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s15",
+      "category": "unresolved evidence",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "a4701a68-f774-45b3-9690-1ed680037d16",
+        "current_decision_id": "a4701a68-f774-45b3-9690-1ed680037d16",
+        "previous_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "current_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing version"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 581.318,
+      "citation_count": 2,
+      "valid_citations": 2,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "A_severity_only",
+      "scenario_id": "s16",
+      "category": "baseline counterexample",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "6f7f9257-7737-4626-979c-fd4dda006c33",
+        "current_decision_id": "6f7f9257-7737-4626-979c-fd4dda006c33",
+        "previous_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "current_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 490.872,
+      "citation_count": 4,
+      "valid_citations": 4,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s01",
+      "category": "clear",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "dd04cde8-ced6-4031-99ea-89a879d8dc0c",
+        "current_decision_id": "dd04cde8-ced6-4031-99ea-89a879d8dc0c",
+        "previous_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "current_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1628.835,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s02",
+      "category": "misleading severity",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "4a9ea320-f86b-4382-b3f8-551b825aff2d",
+        "current_decision_id": "4a9ea320-f86b-4382-b3f8-551b825aff2d",
+        "previous_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "current_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "B",
+          "A"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1061.791,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s03",
+      "category": "irrelevant product",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "7953d6bb-d53b-4425-ba84-2dad3d4587e9",
+        "current_decision_id": "7953d6bb-d53b-4425-ba84-2dad3d4587e9",
+        "previous_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "current_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "B"
+        ],
+        "current_ranking": [
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1043.163,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s04",
+      "category": "missing version",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "26cf2b8a-80a5-4167-8aff-63edfcc0c2cc",
+        "current_decision_id": "26cf2b8a-80a5-4167-8aff-63edfcc0c2cc",
+        "previous_evidence_digest": "d960596fd28d8cd131a76294c30dc4ad63fe84e7d8779bc9257886a74ab1903a",
+        "current_evidence_digest": "d960596fd28d8cd131a76294c30dc4ad63fe84e7d8779bc9257886a74ab1903a",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing version"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 510.389,
+      "citation_count": 7,
+      "valid_citations": 7,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s05",
+      "category": "conflict",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "65f51ad2-6458-4a1f-9601-c9a6141e656b",
+        "current_decision_id": "65f51ad2-6458-4a1f-9601-c9a6141e656b",
+        "previous_evidence_digest": "d18d307efc3184f00442f1f1ccd190a42f1e55640e9fbcb77077f0d21cfb6a99",
+        "current_evidence_digest": "d18d307efc3184f00442f1f1ccd190a42f1e55640e9fbcb77077f0d21cfb6a99",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "B",
+          "A"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: conflict exposed"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 499.558,
+      "citation_count": 17,
+      "valid_citations": 17,
+      "claim_count": 17,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s06",
+      "category": "stale inventory",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "1d18e6dd-c85e-40ea-92be-9ac96180d825",
+        "current_decision_id": "1d18e6dd-c85e-40ea-92be-9ac96180d825",
+        "previous_evidence_digest": "e7074aea4c44ff2234c1660c9e28f3ac4b9551d089f1933b923082f1980aa35c",
+        "current_evidence_digest": "e7074aea4c44ff2234c1660c9e28f3ac4b9551d089f1933b923082f1980aa35c",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: stale product",
+          "A: stale version",
+          "A: stale exposed",
+          "A: stale criticality"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 484.312,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s07",
+      "category": "changed criticality",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "a6e195d6-1a59-4c3a-93b8-2f9cff1df632",
+        "current_decision_id": "a6e195d6-1a59-4c3a-93b8-2f9cff1df632",
+        "previous_evidence_digest": "49856c5dcffe6450139a209273a0a053cee12af45e4d7f0ae106d2e8c3d8e3c7",
+        "current_evidence_digest": "49856c5dcffe6450139a209273a0a053cee12af45e4d7f0ae106d2e8c3d8e3c7",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance",
+          "B: missing criticality"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 563.891,
+      "citation_count": 14,
+      "valid_citations": 14,
+      "claim_count": 14,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s08",
+      "category": "missing policy",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "411a6b27-7e4b-4877-ba47-58390d9fe690",
+        "current_decision_id": "411a6b27-7e4b-4877-ba47-58390d9fe690",
+        "previous_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "current_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 465.798,
+      "citation_count": 7,
+      "valid_citations": 7,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s09",
+      "category": "decision revision",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "32f32dd1-a0ef-4bec-98fe-b0411e6ffa5a",
+        "current_decision_id": "32f32dd1-a0ef-4bec-98fe-b0411e6ffa5a",
+        "previous_evidence_digest": "506c987e180c0e1408332e4afa6e14c7e170b4026ad54c69e957aabe25f913f4",
+        "current_evidence_digest": "506c987e180c0e1408332e4afa6e14c7e170b4026ad54c69e957aabe25f913f4",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "B: missing exposed"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 499.251,
+      "citation_count": 15,
+      "valid_citations": 15,
+      "claim_count": 15,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s10",
+      "category": "no reversal",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": false,
+      "appropriate_abstention": false,
+      "delta": {
+        "previous_decision_id": "64d036a3-1cec-41dd-9165-58374380f2db",
+        "current_decision_id": "64d036a3-1cec-41dd-9165-58374380f2db",
+        "previous_evidence_digest": "a651b56eb64fe12fe560ea7f0ec53e1d432efeda2711e3b87b34c0bbd3bc6d50",
+        "current_evidence_digest": "a651b56eb64fe12fe560ea7f0ec53e1d432efeda2711e3b87b34c0bbd3bc6d50",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 473.552,
+      "citation_count": 15,
+      "valid_citations": 15,
+      "claim_count": 15,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s11",
+      "category": "necessary abstention",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "8b6450a3-b7d1-47cd-bd0d-3f38ca0c1bd2",
+        "current_decision_id": "8b6450a3-b7d1-47cd-bd0d-3f38ca0c1bd2",
+        "previous_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "current_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [],
+        "current_ranking": [],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 521.104,
+      "citation_count": 0,
+      "valid_citations": 0,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s12",
+      "category": "authorization denied",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "deny"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "dc87c342-2bae-4aeb-94db-c698c125244f",
+        "current_decision_id": "dc87c342-2bae-4aeb-94db-c698c125244f",
+        "previous_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "current_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Denied",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 914.972,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s13",
+      "category": "ambiguous effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "unknown"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "c9e4dd07-882f-49f5-9e1e-3bbe2b137a47",
+        "current_decision_id": "c9e4dd07-882f-49f5-9e1e-3bbe2b137a47",
+        "previous_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "current_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Unknown",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1082.449,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s14",
+      "category": "failed effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "fail"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "2bd83df8-794a-444d-88ba-ec7c72f3450b",
+        "current_decision_id": "2bd83df8-794a-444d-88ba-ec7c72f3450b",
+        "previous_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "current_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Failed",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1146.465,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s15",
+      "category": "unresolved evidence",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "6a6ab833-0f9a-4d9d-b9bb-20e01bc6f9e8",
+        "current_decision_id": "6a6ab833-0f9a-4d9d-b9bb-20e01bc6f9e8",
+        "previous_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "current_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing version"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 483.373,
+      "citation_count": 7,
+      "valid_citations": 7,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "B_full_no_followup",
+      "scenario_id": "s16",
+      "category": "baseline counterexample",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "8bb8ca31-9288-4ae0-bad4-e18dbf3e07ac",
+        "current_decision_id": "8bb8ca31-9288-4ae0-bad4-e18dbf3e07ac",
+        "previous_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "current_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1063.044,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s01",
+      "category": "clear",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "bc573134-cf6f-4f95-bba9-170f1f2b25a6",
+        "current_decision_id": "bc573134-cf6f-4f95-bba9-170f1f2b25a6",
+        "previous_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "current_evidence_digest": "b9ab905689739dd21e9f4d0f7814952fab13c62261dbfccdf50b01ad78715278",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1080.308,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s02",
+      "category": "misleading severity",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "93c30b9c-ad7e-4174-a3a9-ab4d0f91f20d",
+        "current_decision_id": "93c30b9c-ad7e-4174-a3a9-ab4d0f91f20d",
+        "previous_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "current_evidence_digest": "8a744d25a1b7c205f0513f2c1ed8dd7774b2790f1a4c1a977c2d356df7e9de7b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "B",
+          "A"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1212.247,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s03",
+      "category": "irrelevant product",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "5573e335-0eb4-4748-9409-7b3ead11a7a2",
+        "current_decision_id": "5573e335-0eb4-4748-9409-7b3ead11a7a2",
+        "previous_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "current_evidence_digest": "c0e078fc8e5fbd22d4d987ff262fa0c4b089b710c8f3570e92c1211bfcf9cec6",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "B"
+        ],
+        "current_ranking": [
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1128.989,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s04",
+      "category": "missing version",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "d08bfe31-037c-4849-b0a3-194937586b0b",
+        "current_decision_id": "fa00effb-c2a4-4d02-a645-d767d2744544",
+        "previous_evidence_digest": "d960596fd28d8cd131a76294c30dc4ad63fe84e7d8779bc9257886a74ab1903a",
+        "current_evidence_digest": "a6f79cb6edcc30df21bb85d4cc89a166116ee531c9cfeaa2fe1fdb78896d2244",
+        "new_evidence_ids": [
+          "synthetic-fixture:s04:A:version:query-0:6c684afa01ab"
+        ],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [
+          {
+            "asset_id": "A",
+            "field": "version",
+            "before": null,
+            "after": "3.1",
+            "evidence_id": "synthetic-fixture:s04:A:version:query-0:6c684afa01ab"
+          }
+        ],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; A version: None \u2192 3.1",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 1,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1223.974,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s05",
+      "category": "conflict",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "b4c2b493-269c-473b-bf9e-ec05950b37a9",
+        "current_decision_id": "d86cf5b8-2a03-4d0d-a09c-3bbcd776ecff",
+        "previous_evidence_digest": "d18d307efc3184f00442f1f1ccd190a42f1e55640e9fbcb77077f0d21cfb6a99",
+        "current_evidence_digest": "578938fdcfb27bdd4379d3949a044f0416f8b12cf31437ff5e2de5665e861363",
+        "new_evidence_ids": [
+          "synthetic-fixture:s05:A:exposed:query-0:977f8f0e3ef5"
+        ],
+        "removed_or_superseded_claims": [
+          "synthetic-fixture:s05:A:exposed:initial-0:cc70820c3c05",
+          "synthetic-fixture:s05:A:exposed:initial-1:adc89b8f8c8f"
+        ],
+        "previous_ranking": [
+          "B",
+          "A"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [
+          {
+            "asset_id": "A",
+            "field": "exposed",
+            "before": [
+              true,
+              false
+            ],
+            "after": false,
+            "evidence_id": "synthetic-fixture:s05:A:exposed:query-0:977f8f0e3ef5"
+          }
+        ],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; A exposed: [True, False] \u2192 False",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": false,
+      "retrieval_rounds": 1,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1178.68,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s06",
+      "category": "stale inventory",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "888503c5-7fed-4161-a9ec-07ed19a5b5ab",
+        "current_decision_id": "767d7b93-45b7-497b-b672-f3c92930eeb7",
+        "previous_evidence_digest": "e7074aea4c44ff2234c1660c9e28f3ac4b9551d089f1933b923082f1980aa35c",
+        "current_evidence_digest": "f1f087c47ec565e8c10fa4f1c79204ded3f5cf202591b90c64f97c54f3ab618d",
+        "new_evidence_ids": [
+          "synthetic-fixture:s06:A:criticality:query-0:0b77dc3ce111",
+          "synthetic-fixture:s06:A:exposed:query-0:fded630eeac7",
+          "synthetic-fixture:s06:A:product:query-0:16d0aa9a7728",
+          "synthetic-fixture:s06:A:version:query-0:036ce2b930bb"
+        ],
+        "removed_or_superseded_claims": [
+          "synthetic-fixture:s06:A:criticality:initial-0:f2385456bd5b",
+          "synthetic-fixture:s06:A:exposed:initial-0:8c3ca1c1466b",
+          "synthetic-fixture:s06:A:product:initial-0:3beae211c697",
+          "synthetic-fixture:s06:A:version:initial-0:e3581707a284"
+        ],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 1,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1297.027,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s07",
+      "category": "changed criticality",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "33f64fd1-b05e-4be3-8a6a-d3e9173bbf43",
+        "current_decision_id": "5b33760d-f04f-40d2-b4cd-da39b6289405",
+        "previous_evidence_digest": "49856c5dcffe6450139a209273a0a053cee12af45e4d7f0ae106d2e8c3d8e3c7",
+        "current_evidence_digest": "656fd61d1ea65ff8cff18b4fd9b893a1263509b75d05f5a98cc836a1b48fe2f6",
+        "new_evidence_ids": [
+          "synthetic-fixture:s07:A:maintenance:query-0:341c703c6284",
+          "synthetic-fixture:s07:B:criticality:query-0:c48a215aa57c"
+        ],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [
+          {
+            "asset_id": "B",
+            "field": "criticality",
+            "before": null,
+            "after": 5,
+            "evidence_id": "synthetic-fixture:s07:B:criticality:query-0:c48a215aa57c"
+          },
+          {
+            "asset_id": "A",
+            "field": "maintenance",
+            "before": null,
+            "after": "Reviewed window available",
+            "evidence_id": "synthetic-fixture:s07:A:maintenance:query-0:341c703c6284"
+          }
+        ],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking changed; B criticality: None \u2192 5, A maintenance: None \u2192 Reviewed window available",
+        "ranking_changed": true,
+        "selection_changed": true
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 2,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1171.862,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s08",
+      "category": "missing policy",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "705907bf-1a6e-4358-8c3a-13df9292f5d7",
+        "current_decision_id": "b61ea7ac-cdf4-4eef-b88f-0290e5e6c1b0",
+        "previous_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "current_evidence_digest": "ec4730c3bc81a38b5eeb6e0fdda4332cc2bac894a9ff941e105c1cb73797691b",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing maintenance"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": true
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 2,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 636.601,
+      "citation_count": 7,
+      "valid_citations": 7,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s09",
+      "category": "decision revision",
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "selection": "B",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "12f24c1c-ee7c-4ed8-803b-30b9a799d2d7",
+        "current_decision_id": "76d0a572-0bfc-4a7f-9614-53bc223f7d3a",
+        "previous_evidence_digest": "506c987e180c0e1408332e4afa6e14c7e170b4026ad54c69e957aabe25f913f4",
+        "current_evidence_digest": "4224dfe82e9971ca988449cc8af14bad3f5a901e6076a663fd4b1523c57ce186",
+        "new_evidence_ids": [
+          "synthetic-fixture:s09:B:criticality:query-0:8629166d53c6",
+          "synthetic-fixture:s09:B:exposed:query-0:00afb582517c"
+        ],
+        "removed_or_superseded_claims": [
+          "synthetic-fixture:s09:B:criticality:initial-0:5ecbcc7ac2a9"
+        ],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "B",
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [
+          {
+            "asset_id": "B",
+            "field": "exposed",
+            "before": null,
+            "after": true,
+            "evidence_id": "synthetic-fixture:s09:B:exposed:query-0:00afb582517c"
+          },
+          {
+            "asset_id": "B",
+            "field": "criticality",
+            "before": 2,
+            "after": 5,
+            "evidence_id": "synthetic-fixture:s09:B:criticality:query-0:8629166d53c6"
+          }
+        ],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking changed; B exposed: None \u2192 True, B criticality: 2 \u2192 5",
+        "ranking_changed": true,
+        "selection_changed": true
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 1,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1140.222,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s10",
+      "category": "no reversal",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "a282986d-6831-4e63-a6a2-7144a6bdbe41",
+        "current_decision_id": "5b9ff895-9914-4bc9-ba96-e98d73e3f331",
+        "previous_evidence_digest": "a651b56eb64fe12fe560ea7f0ec53e1d432efeda2711e3b87b34c0bbd3bc6d50",
+        "current_evidence_digest": "7cc998bb80590552dff9fbc3ec8a424c4e8ee9671aa27827e305362e11c08467",
+        "new_evidence_ids": [
+          "synthetic-fixture:s10:A:maintenance:query-0:c18984c7e3cc"
+        ],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [
+          {
+            "asset_id": "A",
+            "field": "maintenance",
+            "before": null,
+            "after": "Reviewed window available",
+            "evidence_id": "synthetic-fixture:s10:A:maintenance:query-0:c18984c7e3cc"
+          }
+        ],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; A maintenance: None \u2192 Reviewed window available",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 1,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1204.503,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s11",
+      "category": "necessary abstention",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "c6885709-482e-4b6c-a6ec-4cbe529eef9f",
+        "current_decision_id": "c6885709-482e-4b6c-a6ec-4cbe529eef9f",
+        "previous_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "current_evidence_digest": "61510098312c3e9f8de3659ef2e8d2e92f11e46a33ad51380829264ac779d166",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [],
+        "current_ranking": [],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 487.295,
+      "citation_count": 0,
+      "valid_citations": 0,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s12",
+      "category": "authorization denied",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "deny"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "a4702791-e87f-4283-a561-ffcf3fc670dd",
+        "current_decision_id": "a4702791-e87f-4283-a561-ffcf3fc670dd",
+        "previous_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "current_evidence_digest": "a3e232056dd856d33937b122d6c71d9bc2982ae2bf80c8595622d45c0bb27fc9",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Denied",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 856.456,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s13",
+      "category": "ambiguous effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "unknown"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "bbba8359-447c-462a-8d61-cc78058f6d06",
+        "current_decision_id": "bbba8359-447c-462a-8d61-cc78058f6d06",
+        "previous_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "current_evidence_digest": "38354689c1c7186fddb5fd534d130f01d9e0ac5670555c5df8362ef4ebb7c9c8",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Unknown",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1355.428,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s14",
+      "category": "failed effect",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "fail"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "9b646317-9e33-4163-9798-41708282cabc",
+        "current_decision_id": "9b646317-9e33-4163-9798-41708282cabc",
+        "previous_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "current_evidence_digest": "2317d306ba0c0ec29feb76006659f8756a63f74c5423360335a3384cd55fe363",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Failed",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1257.867,
+      "citation_count": 8,
+      "valid_citations": 8,
+      "claim_count": 8,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s15",
+      "category": "unresolved evidence",
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": null,
+      "state": "ABSTAIN",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "631e438e-0ddb-43df-ab77-9920af89d9ed",
+        "current_decision_id": "ac3c2504-819d-4ff4-b8dd-b6eaa4892afc",
+        "previous_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "current_evidence_digest": "40497b89368669fc207b226fb1cecf4818761f7c7dd9c465c12610345ed44822",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A"
+        ],
+        "current_ranking": [
+          "A"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "A: missing version"
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": true
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 2,
+      "task_state": "No Action",
+      "task_rows": 0,
+      "task_integrity": true,
+      "scripted_review_commands": 0,
+      "elapsed_ms": 712.978,
+      "citation_count": 7,
+      "valid_citations": 7,
+      "claim_count": 7,
+      "unsupported_claims": 0
+    },
+    {
+      "configuration": "C_bounded_followup",
+      "scenario_id": "s16",
+      "category": "baseline counterexample",
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "selection": "A",
+      "state": "READY_FOR_HUMAN_REVIEW",
+      "selection_correct": true,
+      "appropriate_abstention": true,
+      "delta": {
+        "previous_decision_id": "7e6d02e9-f1cb-432d-a756-40aaccad0f7d",
+        "current_decision_id": "7e6d02e9-f1cb-432d-a756-40aaccad0f7d",
+        "previous_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "current_evidence_digest": "8beef2ea32bed0cedb58a3034b2acd2696bd47c87fe3badf09c0047f05f944c1",
+        "new_evidence_ids": [],
+        "removed_or_superseded_claims": [],
+        "previous_ranking": [
+          "A",
+          "B"
+        ],
+        "current_ranking": [
+          "A",
+          "B"
+        ],
+        "changed_assumptions": {
+          "removed": [],
+          "added": []
+        },
+        "changed_fields": [],
+        "remaining_uncertainties": [
+          "Exact vulnerability applicability requires authoritative version assessment."
+        ],
+        "explanation": "Ranking unchanged; no changed facts",
+        "ranking_changed": false,
+        "selection_changed": false
+      },
+      "revision_correct": true,
+      "retrieval_rounds": 0,
+      "task_state": "Succeeded",
+      "task_rows": 1,
+      "task_integrity": true,
+      "scripted_review_commands": 5,
+      "elapsed_ms": 1202.512,
+      "citation_count": 16,
+      "valid_citations": 16,
+      "claim_count": 16,
+      "unsupported_claims": 0
+    }
+  ]
+}

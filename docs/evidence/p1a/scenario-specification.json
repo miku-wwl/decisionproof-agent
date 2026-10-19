@@ -1,0 +1,105 @@
+{
+  "authored_before_engine": true,
+  "authorship": "Same implementer; independently specified expected outcomes, not blinded external validation",
+  "utc": "2026-10-19T20:22:05.651847+00:00",
+  "count": 16,
+  "sha256": "5cb1bf8edc80542e5400348ae6e5a0cb8ebf5d8b4dd91cf7762fead462946119",
+  "expected_outcomes": {
+    "s01": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s02": {
+      "selection": "B",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s03": {
+      "selection": "B",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s04": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s05": {
+      "selection": "B",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "changed",
+      "execution": "success"
+    },
+    "s06": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s07": {
+      "selection": "B",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "changed",
+      "execution": "success"
+    },
+    "s08": {
+      "selection": null,
+      "terminal": "ABSTAIN",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s09": {
+      "selection": "B",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "changed",
+      "execution": "success"
+    },
+    "s10": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s11": {
+      "selection": null,
+      "terminal": "ABSTAIN",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s12": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "deny"
+    },
+    "s13": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "unknown"
+    },
+    "s14": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "fail"
+    },
+    "s15": {
+      "selection": null,
+      "terminal": "ABSTAIN",
+      "delta": "unchanged",
+      "execution": "success"
+    },
+    "s16": {
+      "selection": "A",
+      "terminal": "READY_FOR_HUMAN_REVIEW",
+      "delta": "unchanged",
+      "execution": "success"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T20:48:14.820130+00:00",
+  "browser": "Chromium 156.0.8078.4",
+  "playwright": "1.64.0",
+  "kind": "Actual headless Chromium UI test; scripted authenticated review, not an owner click or live sponsor run",
+  "hero_state": "Succeeded",
+  "hero_task_rows": 1,
+  "hero_retrieval_rounds": 1,
+  "hero_rankings": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "A"
+    ]
+  ],
+  "denial_zero_tasks": true,
+  "abstention_zero_runs": true,
+  "new_server_process_history_persisted": true,
+  "lost_http_ack_read_only_refresh_one_execute": true,
+  "hero_control_activations_including_login_navigation": 10,
+  "total_control_activations": 30,
+  "elapsed_seconds": 14.734,
+  "page_errors": [],
+  "blocked_external_requests": [],
+  "screenshot_files": [
+    "browser-abstain.png",
+    "browser-decision-delta.png",
+    "browser-denied.png",
+    "browser-evidence.png",
+    "browser-execution.png",
+    "browser-separate-authorization.png"
+  ]
+}

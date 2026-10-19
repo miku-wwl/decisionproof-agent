@@ -1,0 +1,618 @@
+{
+  "description": "Entirely synthetic, including KEV-like records. No real CISA observations.",
+  "scenarios": [
+    {
+      "id": "s01",
+      "title": "Clear exposed business-critical priority",
+      "category": "clear",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 7,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 2,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Clear exposed business-critical priority; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s02",
+      "title": "Severity alone misses exposed customer service",
+      "category": "misleading severity",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 10,
+          "version": "3.1",
+          "exposed": false,
+          "criticality": 1,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 7,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Severity alone misses exposed customer service; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s03",
+      "title": "Vendor-only KEV match is irrelevant",
+      "category": "irrelevant product",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "DifferentOS",
+          "severity": 10,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 5,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 7,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 3,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Vendor-only KEV match is irrelevant; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s04",
+      "title": "Missing version requires permitted inventory read",
+      "category": "missing version",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": null,
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:A": [
+          {
+            "version": "3.1"
+          }
+        ]
+      },
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Missing version requires permitted inventory read; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s05",
+      "title": "Fresh observation supersedes conflicting exposure",
+      "category": "conflict",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": [
+            true,
+            false
+          ],
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 8,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 3,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:A": [
+          {
+            "exposed": false
+          }
+        ]
+      },
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "expectation_note": "Fresh observation supersedes conflicting exposure; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s06",
+      "title": "Stale inventory needs a fresh bounded read",
+      "category": "stale inventory",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-08-01T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:A": [
+          {
+            "product": "ExampleOS",
+            "version": "3.1",
+            "exposed": true,
+            "criticality": 4
+          }
+        ]
+      },
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Stale inventory needs a fresh bounded read; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s07",
+      "title": "Criticality update changes the maintenance choice",
+      "category": "changed criticality",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": null,
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 8,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": null,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:B": [
+          {
+            "criticality": 5
+          }
+        ],
+        "maintenance_context:A": [
+          {
+            "maintenance": "Reviewed window available"
+          }
+        ]
+      },
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "expectation_note": "Criticality update changes the maintenance choice; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s08",
+      "title": "Missing maintenance context requires abstention",
+      "category": "missing policy",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": null,
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Missing maintenance context requires abstention; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s09",
+      "title": "Hero: missing exposure reveals a stronger priority",
+      "category": "decision revision",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 3,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 8,
+          "version": "3.1",
+          "exposed": null,
+          "criticality": 2,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:B": [
+          {
+            "exposed": true,
+            "criticality": 5
+          }
+        ]
+      },
+      "expected": {
+        "selection": "B",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "changed",
+        "execution": "success"
+      },
+      "expectation_note": "Hero: missing exposure reveals a stronger priority; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s10",
+      "title": "Additional evidence confirms the existing choice",
+      "category": "no reversal",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": null,
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 7,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 2,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "maintenance_context:A": [
+          {
+            "maintenance": "Reviewed window available"
+          }
+        ]
+      },
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Additional evidence confirms the existing choice; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s11",
+      "title": "No relevant product requires abstention",
+      "category": "necessary abstention",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "Unrelated",
+          "severity": 10,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 5,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "No relevant product requires abstention; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s12",
+      "title": "Denied authorization creates no task",
+      "category": "authorization denied",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "deny"
+      },
+      "expectation_note": "Denied authorization creates no task; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s13",
+      "title": "Lost acknowledgment stays Unknown after one task",
+      "category": "ambiguous effect",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "unknown"
+      },
+      "expectation_note": "Lost acknowledgment stays Unknown after one task; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s14",
+      "title": "Pre-dispatch rejection produces Failed without a task",
+      "category": "failed effect",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "fail"
+      },
+      "expectation_note": "Pre-dispatch rejection produces Failed without a task; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s15",
+      "title": "Two insufficient reads require abstention",
+      "category": "unresolved evidence",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 9,
+          "version": null,
+          "exposed": true,
+          "criticality": 4,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {
+        "asset_details:A": [
+          {},
+          {}
+        ]
+      },
+      "expected": {
+        "selection": null,
+        "terminal": "ABSTAIN",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Two insufficient reads require abstention; expectation authored separately before evaluated engine implementation."
+    },
+    {
+      "id": "s16",
+      "title": "Critical internal system outranks minor exposed service",
+      "category": "baseline counterexample",
+      "as_of": "2026-10-20T00:00:00Z",
+      "synthetic": true,
+      "assets": [
+        {
+          "id": "A",
+          "name": "Branch gateway",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 8,
+          "version": "3.1",
+          "exposed": false,
+          "criticality": 5,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        },
+        {
+          "id": "B",
+          "name": "Customer portal",
+          "kev_product": "ExampleOS",
+          "product": "ExampleOS",
+          "severity": 8,
+          "version": "3.1",
+          "exposed": true,
+          "criticality": 1,
+          "maintenance": "Reviewed window available",
+          "observed_utc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "followups": {},
+      "expected": {
+        "selection": "A",
+        "terminal": "READY_FOR_HUMAN_REVIEW",
+        "delta": "unchanged",
+        "execution": "success"
+      },
+      "expectation_note": "Critical internal system outranks minor exposed service; expectation authored separately before evaluated engine implementation."
+    }
+  ]
+}
