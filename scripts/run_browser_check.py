@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    evidence = ROOT/"docs/evidence/p1a"
+    evidence = Path(os.environ.get("DECISIONPROOF_EVIDENCE_DIR", ROOT/"docs/evidence/p1a")).resolve()
     evidence.mkdir(parents=True,exist_ok=True)
     private = ROOT/".preflight/browser"/str(uuid4())
     password = secrets.token_urlsafe(24)
